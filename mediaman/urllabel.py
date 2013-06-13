@@ -1,5 +1,4 @@
 
-
 from PyQt4.QtGui import QLabel, QPixmap, QPainter
 from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkReply
 from PyQt4.QtCore import QUrl, Qt
@@ -14,8 +13,7 @@ class URLLabel(QLabel):
         super(URLLabel, self).__init__(parent)
         self.connection = None
         self._original_pixmap = None
-        self.connection = QNetworkAccessManager(self)
-        self.connection.finished.connect(self.pixmapReceived)
+        self.connection = None
 
     def clear(self):
         self._original_pixmap = None
